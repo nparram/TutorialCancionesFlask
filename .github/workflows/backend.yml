@@ -3,7 +3,7 @@ on:
   push:
     branches: [rama_angular]
 jobs:
-  deploy:
+  build:
     name: build 
     runs-on: ubuntu-latest
     steps:
