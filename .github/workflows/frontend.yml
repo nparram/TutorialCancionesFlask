@@ -1,1 +1,11 @@
-
+name: build frontend
+on: 
+  push:
+    branches: [rama_angular]
+jobs:
+  build:
+    name: build 
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout de repositorio
+      uses: actions/checkout@v2
