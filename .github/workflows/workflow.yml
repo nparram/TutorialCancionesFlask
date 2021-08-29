@@ -1,6 +1,7 @@
-on: push
-  branches: [rama_angular]
 name: build backend
+on: 
+  push:
+    branches: [rama_angular]
 jobs:
   name: build 
   runs-on: ubuntu-latest
