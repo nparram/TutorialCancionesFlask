@@ -1,1 +1,18 @@
-
+on: push
+  branches: [rama_angular]
+name: build backend
+jobs:
+  name: build 
+  runs-on: ubuntu-latest
+  steps:
+  - name: Checkout de repositorio
+    uses: actions/checkout@v2
+  - name: Configuración de entorno de python
+    uses: actions/setup-python@v2
+    with:
+      python-version: '3.7'
+  - name: Instalación de librerías y dependencias
+      working-directory: ./flaskr
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
